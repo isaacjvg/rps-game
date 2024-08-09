@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+  background-color: #11111b;
+  color: #cad3f5;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+hr {
+  width: 350px;
+  margin: 20px auto;
+  border: 1px solid #bac2de;
+}
+
+.buttonCont {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+button {
+  position: relative;
+  background: #181825;
+  border: 2px solid #282838;
+  text-align: center;
+  border-radius: 5px;
+  width: 120px;
+  height: 50px;
+  color: #bac2de;
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden;
+  transition: color 0.3s, box-shadow 0.3s;
+  box-shadow: 3px 0px 5px rgba(30, 30, 46, 1);
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #313244;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+button:hover::after {
+  width: 100%;
+}
+
+button:hover {
+  color: #b4befe;
+  cursor: pointer;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+
+.scoreboard-item {
+  background: #1e1e2e;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #282838;
+  text-align: center;
+  color: #cdd6f4;
+  width: 120px;
+  height: 50px;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+}
+
+.scoreboard-item hr {
+  width: 100px;
+}
+
+.scoreboard-item h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.scoreboard-item p {
+  color: #cdd6f4;
+  font-size: 32px;
+  margin: 10px 0 0;
+  font-weight: bold;
+  transition: .2s ease-in-out;
+}
+
+p#status {
+  font-size: 20px;
+  font-weight: bold;
+  transition: .2s ease-in-out;
+}
+
+.win {
+  color: #a6e3a1;
+}
+
+.lose {
+  color: #f38ba8;
+}
+
+.draw {
+  color: #89b4fa;
+}
+
