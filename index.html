@@ -4,35 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rock, Paper, Scissors</title>
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
   </head>
-  <body>
-    <div class="container">
-      <h1>Rock, Paper, Scissors</h1>
-      <hr />
-      <h3>Select an option:</h3> 
-      <div class="buttonCont">
-        <button onclick="play('rock')">Rock</button>
-        <button onclick="play('paper')">Paper</button>
-        <button onclick="play('scissors')">Scissors</button>
+  <body class="bg-gray-900 flex items-center justify-center min-h-screen">
+    <div class="container text-center text-white">
+      <h1 class="text-4xl font-bold mb-4 animate-bounce">Rock, Paper, Scissors</h1>
+      <hr class="w-2/3 mx-auto border-gray-700 mb-6">
+      <h3 class="text-xl font-semibold mb-4">Select an option:</h3> 
+      <div class="buttonCont flex justify-center space-x-4 mb-8">
+        <button class="btn-option" onclick="play('rock')">
+          <img src="images/rock.png" alt="Rock" class="w-16 h-16 mx-auto">
+        </button>
+        <button class="btn-option" onclick="play('paper')">
+          <img src="images/paper.png" alt="Paper" class="w-16 h-16 mx-auto">
+        </button>
+        <button class="btn-option" onclick="play('scissors')">
+          <img src="images/scissors.png" alt="Scissors" class="w-16 h-16 mx-auto">
+        </button>
       </div>
-      <div class="scoreboard">
-        <div class="scoreboard-item">
-          <h3>Player</h3>
-          <p id="playerScore">0</p>
+      <div id="battlefield" class="flex justify-center items-center mb-8">
+        <!-- Aquí se dibujarán las opciones seleccionadas -->
+      </div>
+      <div class="scoreboard grid grid-cols-3 gap-4 mb-4">
+        <div class="scoreboard-item p-4 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold">Player</h3>
+          <p id="playerScore" class="text-4xl font-bold">0</p>
         </div>
-        <div class="scoreboard-item">
-          <h3>Ties</h3>
-          <p id="tiesCount">0</p>
+        <div class="scoreboard-item p-4 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold">Ties</h3>
+          <p id="tiesCount" class="text-4xl font-bold">0</p>
         </div>
-        <div class="scoreboard-item">
-          <h3>Computer</h3>
-          <p id="computerScore">0</p>
+        <div class="scoreboard-item p-4 bg-gray-800 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold">Computer</h3>
+          <p id="computerScore" class="text-4xl font-bold">0</p>
         </div>
       </div>
-      <p id="status"></p>
+      <p id="status" class="text-2xl font-bold mt-6 transition duration-500"></p>
     </div>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
-
